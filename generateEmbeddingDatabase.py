@@ -41,7 +41,7 @@ if __name__=="__main__":
     word_embed.columns = "DIM_" + word_embed.columns.astype(str)
 
     # データベースに書き出し
-    with sqlite3.connect('EMBEDDINGS.db') as con:
+    with sqlite3.connect('build/EMBEDDINGS.db') as con:
 
         word_embed.to_sql(
             name = 'WORD_EMBED',
@@ -70,7 +70,7 @@ if __name__=="__main__":
     subword_embed.columns = "DIM_" + subword_embed.columns.astype(str)
 
     # データベースに書き出し
-    with sqlite3.connect('EMBEDDINGS.db') as con:
+    with sqlite3.connect('build/EMBEDDINGS.db') as con:
 
         subword_embed.to_sql(
             name = 'SUBWORD_EMBED',
