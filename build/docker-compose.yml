@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  fasttext-vector-api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: fasttext-vector-api
+    volumes:
+      - ./:/app:ro
+    restart: always
+    networks:
+      - fasttext-vector-api
+
+networks:
+  fasttext-vector-api:
