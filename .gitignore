@@ -1,5 +1,5 @@
-~
-.db
-.bin
-.csv
+*~
+*.db
+*.bin
+*.csv
 .ipynb_checkpoints
