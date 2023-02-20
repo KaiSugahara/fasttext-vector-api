@@ -10,8 +10,7 @@ services:
     volumes:
       - ./:/app:ro
     restart: always
-    networks:
-      - fasttext-vector-api
 
 networks:
-  fasttext-vector-api:
+  default:
+    name: fasttext-vector-api
